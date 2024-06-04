@@ -7,9 +7,19 @@ const MapOne = () => {
   useEffect(() => {
     const mapOne = new jsVectorMap({
       selector: '#mapOne',
-      map: 'us_aea_en',
+      map: 'world',
       zoomButtons: true,
-
+      markers: [
+        { name: 'Asia', coords: [34.0479, 100.6197] },
+        { name: 'Saudi Arabia', coords: [23.8859, 45.0792] },
+        {
+          name: 'United States',
+          coords: [37.0902, -95.7129],
+          // Add style for this particular marker
+          // Keep in mind `style` object is merged with `markerStyle.initial`
+          style: { fill: 'red' },
+        },
+      ],
       regionStyle: {
         initial: {
           fill: '#C8D0D8',

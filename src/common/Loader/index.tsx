@@ -1,7 +1,13 @@
+import './style.css';
 const Loader = () => {
   return (
-    <div className="flex h-screen items-center justify-center bg-white">
-      <div className="h-16 w-16 animate-spin rounded-full border-4 border-solid border-primary border-t-transparent"></div>
+    <div className="loading-text">
+      {/* {translate('Loading')}... <Icon name="circle-notch" animation="pulse" /> */}
+      <div className="cssload-loader">
+        <div className="cssload-inner cssload-one"></div>
+        <div className="cssload-inner cssload-two"></div>
+        <div className="cssload-inner cssload-three"></div>
+      </div>
     </div>
   );
 };
